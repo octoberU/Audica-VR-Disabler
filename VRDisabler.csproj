@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{B16C8A36-5A2C-4BF8-912A-5726BB039980}</ProjectGuid>
+        <OutputType>Library</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <RootNamespace>VRDisabler</RootNamespace>
+        <AssemblyName>VRDisabler</AssemblyName>
+        <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\ICSharpCode.SharpZipLib.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N.CJK, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.CJK.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N.MidEast, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.MidEast.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N.Other, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.Other.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N.Rare, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.Rare.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppI18N.West, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppI18N.West.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppMono.Security, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppMono.Security.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2Cppmscorlib, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2Cppmscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppSystem.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem.Configuration, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppSystem.Configuration.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem.Core, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppSystem.Core.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem.Runtime.Serialization, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+        </Reference>
+        <Reference Include="Il2CppSystem.Xml, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Il2CppSystem.Xml.dll</HintPath>
+        </Reference>
+        <Reference Include="MelonLoader, Version=0.4.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\MelonLoader.dll</HintPath>
+        </Reference>
+        <Reference Include="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\mscorlib.dll</HintPath>
+        </Reference>
+        <Reference Include="System" />
+        <Reference Include="System.Core" />
+        <Reference Include="System.Data" />
+        <Reference Include="System.Xml" />
+        <Reference Include="UnhollowerBaseLib, Version=0.4.15.1, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnhollowerBaseLib.dll</HintPath>
+        </Reference>
+        <Reference Include="UnhollowerRuntimeLib, Version=0.4.10.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnhollowerRuntimeLib.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.Analytics.DataPrivacy, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Unity.Analytics.DataPrivacy.dll</HintPath>
+        </Reference>
+        <Reference Include="Unity.TextMeshPro, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\Unity.TextMeshPro.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AccessibilityModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.AccessibilityModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AIModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.AIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AnimationModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.AnimationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ARModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ARModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AssetBundleModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.AssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.AudioModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.AudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.BaselibModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.BaselibModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClothModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ClothModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterInputModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ClusterInputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ClusterRendererModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ClusterRendererModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CrashReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.CrashReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.DirectorModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.DirectorModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.FileSystemHttpModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.FileSystemHttpModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GameCenterModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.GameCenterModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.GridModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.GridModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.HotReloadModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.HotReloadModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Il2CppAssetBundleManager, Version=0.4.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.Il2CppAssetBundleManager.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Il2CppImageConversionManager, Version=0.4.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.Il2CppImageConversionManager.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ImageConversionModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ImageConversionModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.IMGUIModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.IMGUIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.InputModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.InputModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.JSONSerializeModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.JSONSerializeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.LocalizationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.LocalizationModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Networking, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.Networking.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ParticleSystemModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ParticleSystemModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PerformanceReportingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.PerformanceReportingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Physics2DModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.Physics2DModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.PhysicsModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.PhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ProfilerModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ProfilerModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.ScreenCaptureModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.ScreenCaptureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SharedInternalsModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.SharedInternalsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpatialTracking, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.SpatialTracking.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteMaskModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.SpriteMaskModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.SpriteShapeModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.StreamingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.StreamingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.StyleSheetsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.StyleSheetsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.SubstanceModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.SubstanceModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TerrainModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TerrainPhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextCoreModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TextCoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TextRenderingModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TextRenderingModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TilemapModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TilemapModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Timeline, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.Timeline.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TimelineModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TimelineModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.TLSModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.TLSModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UI, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UI.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIElementsModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UIElementsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UIModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UIModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UmbraModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UmbraModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UNETModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UNETModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityAnalyticsModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityConnectModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityConnectModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityTestProtocolModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestAudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityWebRequestModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestTextureModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.UnityWebRequestWWWModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VehiclesModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.VehiclesModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VFXModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.VFXModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VideoModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.VideoModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.VRModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.VRModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.WindModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.XRModule, Version=3.7.1.6, Culture=neutral, PublicKeyToken=null">
+          <HintPath>F:\Steam\steamapps\common\Audica\MelonLoader\Managed\UnityEngine.XRModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="VRDisablerMod.cs" />
+        <Compile Include="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+
+</Project>
